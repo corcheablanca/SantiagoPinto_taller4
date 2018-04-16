@@ -70,5 +70,5 @@ kernel= FT(gauss())
 
 transform=IFT(imagen*kernel)
 plt.figure()
-plt.imshow(transform, cmap="gray")
+#plt.imshow(transform, cmap="gray")
 plt.imsave("suave.png",transform[:,:], cmap= plt.cm.gray)
