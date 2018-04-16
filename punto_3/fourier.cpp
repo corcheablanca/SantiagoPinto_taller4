@@ -154,8 +154,8 @@ double * fourier(double* Preal, double* Pimaginaria, double* x_nuevo, double*y_n
     double P_imaginario = 0.0;
     for (int j =0; j< filas;j++)
 {
-      P_real += y_nuevo[j] * cos((-2*3.14159*i*j)/filas);
-      P_imaginario += y_nuevo[j] * sin((-2*3.14159*i*j)/filas);
+      P_real += y_nuevo[j] * cos((-2*3.1415*i*j)/filas);
+      P_imaginario += y_nuevo[j] * sin((-2*3.1415*i*j)/filas);
       Preal[j]= P_real;
       Pimaginaria[j]= P_imaginario;
       cout<<Preal[j]<<"  " << " " << Pimaginaria[j] <<endl;
