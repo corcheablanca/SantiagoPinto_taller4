@@ -106,8 +106,8 @@ def darnombre():
 
 transform=IFT(imagen*kernel)
 plt.figure()
-plt.imshow(transform, cmap="gray")
-plt.show()
+#plt.imshow(transform, cmap="gray")
+#plt.show()
 plt.imsave(darnombre(),transform[:,:], cmap= plt.cm.gray)
 
 
