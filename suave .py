@@ -7,7 +7,7 @@ pi = np.pi * 2.0
 
 from PIL import Image
 def black_and_white():
-	image = Image.open("t.png")
+	image = Image.open("imagen.png")
 	bw = image.convert('L')
 	bw.save("imagen.png")
 #comvierte la imagen en blanco y negro
