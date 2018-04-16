@@ -2,13 +2,21 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 import cmath
+import sys
+
+sigma=sys.argv[2]
+nombre_imagen=sys.argv[1]
+
 pi = np.pi * 2.0
+
 
 from PIL import Image
 def black_and_white():
-	image = Image.open("imagen.png")
+	global nombre_imagen
+	image = Image.open(nombre_imagen)
 	bw = image.convert('L')
 	bw.save("imagenbw.png")
+
 #comvierte la imagen en blanco y negro
 black_and_white()
 image=plt.imread("imagenbw.png")
@@ -49,12 +57,12 @@ def IFT(dft2d_b):
 
 #codigo para una gaussiana en dos dimensiones
 def gauss():
+	global sigma
 	global M, N
 	x, y = np.meshgrid(np.linspace(0.0,N-1,N), np.linspace(0.0,M-1,M))
 	d = np.sqrt(x*x+y*y)
-	sigma, mu = 1.0, 0.0
-	g = np.exp(-( (d-mu)**2 / ( 2.0 * sigma**2 ) ) )
-	
+	mu = 0.0
+	g = np.exp(-( (d-mu)**2 / ( 2.0 * float(sigma)**2.0 ) ) )
 	return (g)
 
 imagen = FT(image)
