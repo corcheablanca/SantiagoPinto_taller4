@@ -9,7 +9,7 @@ from PIL import Image
 def black_and_white():
 	image = Image.open("imagen.png")
 	bw = image.convert('L')
-	bw.save("imagen.png")
+	bw.save("imagenbw.png")
 #comvierte la imagen en blanco y negro
 black_and_white()
 image=plt.imread("imagenbw.png")
