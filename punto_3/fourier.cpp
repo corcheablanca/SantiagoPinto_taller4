@@ -144,7 +144,7 @@ double* Plagrange( double*col1, double* col2, double *x_mod, double* y_mod, int 
 }
 		  
 		 
-// Funcion para la transformada de Fourier separando real de iamginario 
+// calcula la transformada de fourier.
 
 double * fourier(double* Preal, double* Pimaginaria, double* x_nuevo, double*y_nuevo, int filas)
 {
